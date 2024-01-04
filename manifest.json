@@ -1,0 +1,16 @@
+{
+  "name": "SimpleTimer-Extensions",
+  "version": "2.0.0",
+  "manifest_version": 3,
+  "description": "SimpleTimerのChrome拡張機能",
+  "action": {
+    "default_title": "SimpleTimer-Extensions",
+    "default_popup": "src/html/popup.html"
+  },
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png",
+    "512": "icon/icon512.png"
+  }
+}
