@@ -106,8 +106,7 @@ function alert(test: string) {
  * アラートを削除
  */
 function deleteAlert() {
-    alertText = ""
-    alertElement.innerHTML = ""
+    alert("　　　　　　　　　　")
 }
 
 
@@ -266,6 +265,9 @@ function updateDisplayTask() {
 ////////////////////////////////////////////
 //  タスクの実行
 ////////////////////////////////////////////
+
+//アラートを削除
+deleteAlert()
 
 //最初に1回実行
 requestTask()
