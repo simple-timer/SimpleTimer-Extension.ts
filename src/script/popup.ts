@@ -39,7 +39,6 @@ type TimerData = {
     id: number
     channelId: number
     numberIndex: number
-    seconds: number
     displayMessageBase: string
     timerServiceData: TimerServiceData
 }
@@ -48,6 +47,7 @@ type TimerData = {
  * タイマーの稼働のデータ
  */
 type TimerServiceData = {
+    seconds: number
     isStarted: boolean
     isMove: boolean
     isFinish: boolean
@@ -133,7 +133,7 @@ function timerDataToTime(timerData: TimerData) {
     //経過時間
     let elapsedTime = time - timerData.timerServiceData.startMilliTime
     //残りの秒数
-    let seconds = timerData.seconds - Math.floor(((elapsedTime - timerData.timerServiceData.adjustTime) / 1000))
+    let seconds = timerData.timerServiceData.seconds - Math.floor(((elapsedTime - timerData.timerServiceData.adjustTime) / 1000))
 
     //秒数がマイナスの時
     if (seconds < 0) {
