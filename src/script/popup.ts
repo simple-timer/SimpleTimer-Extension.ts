@@ -1,5 +1,6 @@
 //APIサーバーのURL
 const apiUrl = "http://localhost:8080/timers/"
+const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJvYXV0aDAiLCJjb250ZW50cyI6IlwiMVwiIn0._f9NyX4zH7sPLSM1OunvommBjTG3pIkV6QnrwlKeqlE"
 
 ////////////////////////////////////////////
 //  各種エレメントの取得
@@ -189,6 +190,7 @@ function requestTask() {
     let request = new XMLHttpRequest()
     request.open("GET", requestUrl)
     request.responseType = "json"
+    request.setRequestHeader("Authorization", `Bearer ${accessToken}`)
     request.onload = () => {
         //ステータスを確認
         if (request.readyState == 4 && request.status == 200) {
